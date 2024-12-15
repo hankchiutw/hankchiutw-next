@@ -1,3 +1,4 @@
+import { ChatWindow } from '@/components/chat/chat-window';
 import { Education } from '@/components/Education';
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { Hero } from '@/components/Hero';
@@ -50,6 +51,7 @@ export default function Home() {
           <Education />
         </Section>
       </div>
+      <ChatWindow></ChatWindow>
     </main>
   );
 }
