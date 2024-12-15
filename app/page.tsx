@@ -1,8 +1,8 @@
+import { Education } from '@/components/Education';
+import { ExperienceCard } from '@/components/ExperienceCard';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
-import { ExperienceCard } from '@/components/ExperienceCard';
 import { Skills } from '@/components/Skills';
-import { Education } from '@/components/Education';
 
 const EXPERIENCE = [
   {
@@ -13,8 +13,8 @@ const EXPERIENCE = [
       'First dedicated web front-end engineer to reshape the legacy codebase',
       'Enabled transition from multi-page to SPA architecture',
       'Designed internal library to bootstrap AngularJS and Angular',
-      'Scaffolded new project using Feature-Sliced Design methodology'
-    ]
+      'Scaffolded new project using Feature-Sliced Design methodology',
+    ],
   },
   {
     title: 'Senior Front-end Engineer',
@@ -23,9 +23,9 @@ const EXPERIENCE = [
     achievements: [
       'Improved Angular project performance, reducing load time from 4s to 2s',
       'Developed reusable Angular modules for cross-product usage',
-      'Initiated supporting product in Electron for desktop platforms'
-    ]
-  }
+      'Initiated supporting product in Electron for desktop platforms',
+    ],
+  },
 ];
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-b from-background to-muted">
       <div className="container mx-auto px-4 py-16">
         <Hero />
-        
+
         <Section title="Professional Experience">
           <div className="space-y-6">
             {EXPERIENCE.map((job) => (

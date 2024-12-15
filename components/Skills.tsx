@@ -1,11 +1,18 @@
 import { Card } from './Card';
 
-const TECHNICAL_SKILLS = ['TypeScript', 'Angular', 'RxJS', 'Webpack', 'React', 'Node.js'];
+const TECHNICAL_SKILLS = [
+  'TypeScript',
+  'Angular',
+  'RxJS',
+  'Webpack',
+  'React',
+  'Node.js',
+];
 const CORE_STRENGTHS = [
   'Strong architectural thinking',
   'Clean code principles advocate',
   'Code refactoring expert',
-  'Team mentoring'
+  'Team mentoring',
 ];
 
 export function Skills() {
@@ -15,10 +22,9 @@ export function Skills() {
         <h3 className="font-semibold mb-4">Technical Skills</h3>
         <div className="flex flex-wrap gap-2">
           {TECHNICAL_SKILLS.map((skill) => (
-            <span 
+            <span
               key={skill}
-              className="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-sm"
-            >
+              className="px-3 py-1 bg-secondary text-secondary-foreground rounded-md text-sm">
               {skill}
             </span>
           ))}
