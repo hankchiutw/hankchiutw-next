@@ -1,9 +1,9 @@
-import { ChatWindow } from '@/components/chat/chat-window';
 import { Education } from '@/components/Education';
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { Hero } from '@/components/Hero';
 import { Section } from '@/components/Section';
 import { Skills } from '@/components/Skills';
+import { ChatWindow } from '@/widgets/llm-bot';
 
 const EXPERIENCE = [
   {
