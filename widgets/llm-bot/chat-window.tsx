@@ -1,6 +1,6 @@
 'use client';
 
-import { useChat } from '@/hooks/use-chat';
+import { useChat } from 'ai/react';
 import { useState } from 'react';
 
 import { ChatHeader } from './chat-header';
@@ -9,15 +9,8 @@ import { MessageList } from './message-list';
 
 export function ChatWindow() {
   const [isOpen, setIsOpen] = useState(false);
-  const { messages, isLoading, input, setInput, sendMessage } = useChat();
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!input.trim()) return;
-
-    await sendMessage(input);
-    setInput('');
-  };
+  const { messages, input, handleInputChange, handleSubmit, isLoading } =
+    useChat();
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
@@ -30,7 +23,7 @@ export function ChatWindow() {
           <ChatInput
             input={input}
             isLoading={isLoading}
-            onInputChange={setInput}
+            onInputChange={handleInputChange}
             onSubmit={handleSubmit}
           />
         </div>

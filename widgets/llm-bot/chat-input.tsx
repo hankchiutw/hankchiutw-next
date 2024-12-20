@@ -1,11 +1,9 @@
-'use client';
-
 import { Send } from 'lucide-react';
 
 interface ChatInputProps {
   input: string;
   isLoading: boolean;
-  onInputChange: (value: string) => void;
+  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent) => void;
 }
 
@@ -21,7 +19,7 @@ export function ChatInput({
         <input
           type="text"
           value={input}
-          onChange={(e) => onInputChange(e.target.value)}
+          onChange={onInputChange}
           placeholder="Type your message..."
           className="flex-1 px-3 py-2 rounded-md border border-input bg-background"
           disabled={isLoading}

@@ -1,8 +1,7 @@
 'use client';
 
-import { Message } from '@/types/chat';
-
 import { MessageBubble } from './message-bubble';
+import { Message } from './types';
 
 interface MessageListProps {
   messages: Message[];
