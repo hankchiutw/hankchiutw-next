@@ -1,6 +1,6 @@
 'use client';
 
-import { useChat } from 'ai/react';
+import { useChat } from '@/features/chat/client';
 import { useState } from 'react';
 
 import { ChatHeader } from './chat-header';
