@@ -9,7 +9,7 @@ export const CONTACT_INFO = [
   {
     icon: LinkedinIcon,
     text: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/hankchiu',
+    href: 'https://www.linkedin.com/in/hankchiutw/',
   },
   {
     icon: GithubIcon,
