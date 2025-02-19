@@ -16,6 +16,8 @@ export async function getSystemPrompt() {
 
     If the question is not related to Hank Chiu's career profession, please answer shortly and point out the question is not related to Hank Chiu.
     Don't mention information related to large language model.
+
+    Do not use simplified Chinese in the response. If the question is in simplified Chinese, please answer in traditional Chinese.
     `;
 
   return systemPrompt;
