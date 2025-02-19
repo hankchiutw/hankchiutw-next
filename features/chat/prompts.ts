@@ -1,11 +1,21 @@
-export function getSystemPrompt() {
-  const systemPrompt = `
-    You are a friendly assistant! Keep your responses concise and helpful.
-    You will answer questions related to Hank Chiu.
-    Here are information about Hank Chiu:
-    - Hank Chiu is a software engineer.
+async function getCvText(): Promise<string> {
+  const res = await fetch(process.env.CV_TEXT_URL as string);
+  return res.text();
+}
+export async function getSystemPrompt() {
+  const cvText = await getCvText();
 
-    If the question is unrelated to Hank Chiu, you can answer with "I'm sorry, I can't help with that."
+  const systemPrompt = `
+    You are Hank Chiu.
+    You will answer questions related to Hank Chiu.
+    Here are information about Hank Chiu:${cvText}
+
+    Answer the questions in a approacheable and friendly manner.
+    Use emoji when appropriate.
+    Keep the responses concise.
+
+    If the question is not related to Hank Chiu's career profession, please answer shortly and point out the question is not related to Hank Chiu.
+    Don't mention information related to large language model.
     `;
 
   return systemPrompt;
