@@ -9,7 +9,7 @@ export function Hero() {
       <h2 className="text-2xl text-muted-foreground mb-6">
         Web Front-End Expert
       </h2>
-      <div className="flex justify-center gap-4 mb-6">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         {CONTACT_INFO.map(({ icon, text, href }) => (
           <ContactButton key={text} icon={icon} href={href}>
             {text}
