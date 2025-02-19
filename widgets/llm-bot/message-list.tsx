@@ -10,7 +10,13 @@ interface MessageListProps {
 
 export function MessageList({ messages, isLoading }: MessageListProps) {
   return (
-    <div className="flex-1 overflow-y-auto p-4 space-y-4">
+    <div
+      className="flex-1 overflow-y-auto p-4 space-y-4"
+      ref={(el) => {
+        if (el) {
+          el.scrollTop = el.scrollHeight;
+        }
+      }}>
       {messages.map((message) => (
         <MessageBubble key={message.id} message={message} />
       ))}

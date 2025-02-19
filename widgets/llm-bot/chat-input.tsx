@@ -23,6 +23,7 @@ export function ChatInput({
           placeholder="Type your message..."
           className="flex-1 px-3 py-2 rounded-md border border-input bg-background"
           disabled={isLoading}
+          ref={(input) => input?.focus()}
         />
         <button
           type="submit"
