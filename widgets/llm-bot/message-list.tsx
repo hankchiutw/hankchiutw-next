@@ -16,7 +16,7 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
       ))}
       {isLoading && (
         <div className="flex justify-start">
-          <div className="bg-muted rounded-lg px-4 py-2">Thinking...</div>
+          <div className="bg-muted rounded-lg px-4 py-2">Typing...</div>
         </div>
       )}
     </div>

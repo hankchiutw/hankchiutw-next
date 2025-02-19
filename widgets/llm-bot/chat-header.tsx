@@ -20,7 +20,10 @@ export function ChatHeader({ isOpen, onToggle }: ChatHeaderProps) {
 
   return (
     <div className="flex items-center justify-between p-4 border-b">
-      <h3 className="font-semibold">Chat with me!</h3>
+      <div className="flex items-center space-x-2">
+        <img src="portrait.png" alt="Avatar" className="w-6 h-6 rounded-full" />
+        <h3 className="font-semibold">Hank Chiu</h3>
+      </div>
       <button onClick={onToggle} className="p-2 hover:bg-muted rounded-md">
         <Minimize2 className="h-4 w-4" />
       </button>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useChat } from '@/features/chat/client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ChatHeader } from './chat-header';
 import { ChatInput } from './chat-input';
@@ -9,8 +9,21 @@ import { MessageList } from './message-list';
 
 export function ChatWindow() {
   const [isOpen, setIsOpen] = useState(false);
-  const { messages, input, handleInputChange, handleSubmit, isLoading } =
-    useChat();
+  const {
+    append,
+    messages,
+    input,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+  } = useChat();
+
+  useEffect(() => {
+    append({
+      role: 'data',
+      content: 'hi',
+    });
+  }, []);
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
