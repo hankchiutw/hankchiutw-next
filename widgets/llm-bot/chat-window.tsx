@@ -27,20 +27,24 @@ export function ChatWindow() {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      {!isOpen ? (
+      {!isOpen && (
         <ChatHeader isOpen={false} onToggle={() => setIsOpen(true)} />
-      ) : (
-        <div className="w-[380px] h-[500px] flex flex-col bg-background border rounded-lg shadow-lg">
-          <ChatHeader isOpen={true} onToggle={() => setIsOpen(false)} />
-          <MessageList messages={messages} isLoading={isLoading} />
-          <ChatInput
-            input={input}
-            isLoading={isLoading}
-            onInputChange={handleInputChange}
-            onSubmit={handleSubmit}
-          />
-        </div>
       )}
+      <div
+        className={`transition-all duration-400 ease-in-out origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
+        {isOpen && (
+          <div className="w-[380px] h-[500px] flex flex-col bg-background border rounded-lg shadow-lg">
+            <ChatHeader isOpen={true} onToggle={() => setIsOpen(false)} />
+            <MessageList messages={messages} isLoading={isLoading} />
+            <ChatInput
+              input={input}
+              isLoading={isLoading}
+              onInputChange={handleInputChange}
+              onSubmit={handleSubmit}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
