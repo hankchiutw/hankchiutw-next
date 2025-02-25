@@ -13,6 +13,9 @@ export async function createChatAction(req: Request) {
     model,
     messages,
     system: systemPrompt,
+    experimental_telemetry: {
+      isEnabled: true,
+    },
   });
 
   return result.toDataStreamResponse();
