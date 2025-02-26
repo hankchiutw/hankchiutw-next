@@ -1,13 +1,16 @@
-import { Education } from '@/components/Education';
-import { ExperienceCard } from '@/components/ExperienceCard';
-import { Section } from '@/components/Section';
-import { Skills } from '@/components/Skills';
 import { useMyInfo } from '@/entities';
+
+import { Education } from './Education';
+import { ExperienceCard } from './ExperienceCard';
+import { Hero } from './Hero';
+import { Section } from './Section';
+import { Skills } from './Skills';
 
 export function MainContent() {
   const { myInfo } = useMyInfo();
   return (
     <>
+      <Hero />
       <Section title="Professional Experience">
         <div className="space-y-6">
           {myInfo.experiences.map((job) => (
