@@ -1,9 +1,9 @@
-import { useMyInfo } from '@/entities';
+import { getMyInfo } from '@/entities';
 
 import { ContactButton } from './ContactButton';
 
-export function Hero() {
-  const { myInfo } = useMyInfo();
+export async function Hero() {
+  const { myInfo } = await getMyInfo();
   return (
     <div className="mb-16 text-center">
       <h1 className="text-4xl font-bold mb-4">Hank Chiu</h1>

@@ -1,4 +1,8 @@
 import { GithubIcon, LinkedinIcon, MailIcon, MapPinIcon } from 'lucide-react';
+import SheetParser from 'public-google-sheets-parser';
+
+const SHEET_ID = process.env.MY_INFO_GOOGLE_SHEET_ID;
+const parser = new SheetParser(SHEET_ID);
 
 const contacts = [
   {
@@ -22,8 +26,6 @@ const contacts = [
     href: undefined,
   },
 ];
-const about =
-  'A dedicated software engineer specializing in web front-end development, with valuable experience in back-end technologies. Committed to delivering high-quality solutions that align with business goals and enhance user experiences.';
 const experiences = [
   {
     title: 'Senior Front-end Engineer',
@@ -47,13 +49,24 @@ const experiences = [
     ],
   },
 ];
-export const useMyInfo = () => {
+
+async function getFromSheet(sheetName: string) {
+  parser.setOption({ sheetName });
+  const data = await parser.parse();
+  return data;
+}
+
+export async function getMyInfo() {
+  const [{ about }] = await getFromSheet('basic');
+  const projects = await getFromSheet('projects');
+
   const myInfo = {
     about,
     contacts,
     experiences,
+    projects,
   };
   return {
     myInfo,
   };
-};
+}

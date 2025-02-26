@@ -1,4 +1,4 @@
-import { useMyInfo } from '@/entities';
+import { getMyInfo } from '@/entities';
 
 import { Education } from './Education';
 import { ExperienceCard } from './ExperienceCard';
@@ -6,8 +6,8 @@ import { Hero } from './Hero';
 import { Section } from './Section';
 import { Skills } from './Skills';
 
-export function MainContent() {
-  const { myInfo } = useMyInfo();
+export async function MainContent() {
+  const { myInfo } = await getMyInfo();
   return (
     <>
       <Hero />
