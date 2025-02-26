@@ -2,15 +2,15 @@ import { Education } from '@/components/Education';
 import { ExperienceCard } from '@/components/ExperienceCard';
 import { Section } from '@/components/Section';
 import { Skills } from '@/components/Skills';
-
-import { EXPERIENCE } from './consts';
+import { useMyInfo } from '@/entities';
 
 export function MainContent() {
+  const { myInfo } = useMyInfo();
   return (
     <>
       <Section title="Professional Experience">
         <div className="space-y-6">
-          {EXPERIENCE.map((job) => (
+          {myInfo.experiences.map((job) => (
             <ExperienceCard key={job.company} {...job} />
           ))}
         </div>
