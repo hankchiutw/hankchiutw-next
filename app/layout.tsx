@@ -1,5 +1,6 @@
 import './globals.css';
 
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -38,7 +39,11 @@ export default function RootLayout({
           href="/apple-touch-icon.png"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          {children}
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
