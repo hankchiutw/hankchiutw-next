@@ -1,6 +1,7 @@
 import './globals.css';
 
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -43,6 +44,7 @@ export default function RootLayout({
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           {children}
         </AppRouterCacheProvider>
+        <Analytics />
       </body>
     </html>
   );
