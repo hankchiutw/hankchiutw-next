@@ -19,11 +19,13 @@ export function ChatWindow() {
   } = useChat();
 
   useEffect(() => {
-    append({
-      role: 'data',
-      content: 'hi',
-    });
-  }, []);
+    if (isOpen && messages.length === 0) {
+      append({
+        role: 'data',
+        content: 'hi',
+      });
+    }
+  }, [isOpen, messages]);
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
