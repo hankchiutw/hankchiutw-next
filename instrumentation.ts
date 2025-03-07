@@ -4,6 +4,8 @@ import { LangfuseExporter } from 'langfuse-vercel';
 export function register() {
   registerOTel({
     serviceName: 'hankchiutw-next',
-    traceExporter: new LangfuseExporter(),
+    traceExporter: new LangfuseExporter({
+      environment: process.env.LANGFUSE_ENVIRONMENT,
+    }),
   });
 }
