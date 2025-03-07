@@ -171,8 +171,8 @@ importers:
         specifier: ^1.2.4
         version: 1.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       langfuse-vercel:
-        specifier: ^3.35.2
-        version: 3.35.2(ai@4.0.20(react@18.2.0)(zod@3.24.1))
+        specifier: ^3.36.0
+        version: 3.36.0(ai@4.0.20(react@18.2.0)(zod@3.24.1))
       lucide-react:
         specifier: ^0.446.0
         version: 0.446.0(react@18.2.0)
@@ -2388,18 +2388,18 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  langfuse-core@3.35.2:
-    resolution: {integrity: sha512-nHcoe/RPxwCAVvb91NDjVqvaXkBuVI6u9KuhCXLOasIOqMZRnXMeDhheAPE1ZtVGpmc3faYdPPGdobqRB+MdCg==}
+  langfuse-core@3.36.0:
+    resolution: {integrity: sha512-qxaWxy5E4oIyCYPwiRKXNfMP9vwRZnHiHLPDqAssVzcRp8bTG6NGR+9yfP7Yc8bjNxB364FRtm3MtdMhn6I3iQ==}
     engines: {node: '>=18'}
 
-  langfuse-vercel@3.35.2:
-    resolution: {integrity: sha512-Y19Vw5LAndmNNUxOhF64+Q0bgnn9UmWzCw97QRAnlgVJJGO4KxS9nSccN0LAIsQggOOWn2NiHCwernBGlL/3HQ==}
+  langfuse-vercel@3.36.0:
+    resolution: {integrity: sha512-KR4v0e5raV4PTe/0uOZxfx3Wc9h+aItB6xo2TE4J2utIkLsNyw5UEGQjdmSUA3nlVKhyeEIa8iP+5iw9pJiByg==}
     engines: {node: '>=18'}
     peerDependencies:
       ai: '>=3.2.44'
 
-  langfuse@3.35.2:
-    resolution: {integrity: sha512-iLKK9capLVle7vHRHKYj6tqRJVD+ncc5nVcKYEA7eidNPRSSYRdZf73Q73lW8wFBcKpbynRJN1byWT615Gg9tw==}
+  langfuse@3.36.0:
+    resolution: {integrity: sha512-rHOh1xXlt/iCaw3ZULJZ5OH3jSfxb68ZzCnf6EoZVfT/vv7fIQ75L7sTfH2LdDSBwTVKvZWZYX9vJWAaX9AyHQ==}
     engines: {node: '>=18'}
 
   language-subtag-registry@0.3.23:
@@ -5577,19 +5577,19 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  langfuse-core@3.35.2:
+  langfuse-core@3.36.0:
     dependencies:
       mustache: 4.2.0
 
-  langfuse-vercel@3.35.2(ai@4.0.20(react@18.2.0)(zod@3.24.1)):
+  langfuse-vercel@3.36.0(ai@4.0.20(react@18.2.0)(zod@3.24.1)):
     dependencies:
       ai: 4.0.20(react@18.2.0)(zod@3.24.1)
-      langfuse: 3.35.2
-      langfuse-core: 3.35.2
+      langfuse: 3.36.0
+      langfuse-core: 3.36.0
 
-  langfuse@3.35.2:
+  langfuse@3.36.0:
     dependencies:
-      langfuse-core: 3.35.2
+      langfuse-core: 3.36.0
 
   language-subtag-registry@0.3.23: {}
 
